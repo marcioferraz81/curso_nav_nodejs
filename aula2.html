@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nodejs - express</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <div class="container my-3" style="text-align: center;">
+            <img src="img/logo_cps_versao_cor.png" alt="Centro Paula Souza" style="width: 10%; "/>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <!-- sticky-top -> fixo no topo com espaço com conteúdo abaixo)-->
+            <a class="navbar-brand" href="index.html">Nodejs - express</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon">
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"
+                           title="Página inicial"><i class="bi bi-house"></i>
+                            Instruções</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aula1.html"
+                           title="Aula 1"><i
+                                class="bi bi-input-cursor-text"></i> Aula 1</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="aula2.html"
+                           title="Aula 2"><i
+                                class="bi bi-input-cursor-text"></i> Aula 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aula3.html"
+                           title="Aula 3"><i
+                                class="bi bi-input-cursor-text"></i> Aula 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aula4.html"
+                           title="Aula 4"><i
+                                class="bi bi-input-cursor-text"></i> Aula 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aula5.html"
+                           title="Aula 5"><i
+                                class="bi bi-input-cursor-text"></i> Aula 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="atividade.html"
+                           title="Atividade"><i
+                                class="bi bi-input-cursor-text"></i> Atividade</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container my-3">
+            <h3>Aula 2 - Dependências e estrutura do projeto</h3>
+            <p>No VS Code inicialize um novo projeto (pasta vazia, chamada "navegacao-app")</p>
+            <p>Neste projeto, abra o terminal e instale as seguintes dependências</p>
+            <h4>Dependências</h4>
+            <code>npm install express ejs </code><br>
+            <code>npm install --save-dev nodemon</code><br><br>
+
+            <h5>1. Express</h5>
+            <p>O Express é um framework minimalista para Node.js que facilita a construção de aplicativos web e APIs. Ele fornece um conjunto robusto de recursos para criar servidores HTTP e gerenciar rotas, middleware, entre outros. O Express simplifica o processo de criar e configurar um servidor Node.js e é amplamente utilizado devido à sua flexibilidade e facilidade de uso.</p>
+
+            <h5>2. EJS (Embedded JavaScript Templating)</h5>
+            <p>O EJS é um motor de visualização para Node.js que permite gerar HTML com JavaScript embutido. Com o EJS, você pode criar páginas dinâmicas e reutilizar componentes de interface, como cabeçalhos e rodapés, sem duplicar o código.</p>
+
+            <h5>3. Nodemon</h5>
+            <p>O Nodemon é uma ferramenta que ajuda no desenvolvimento de aplicativos Node.js reiniciando automaticamente o servidor quando mudanças são detectadas no código-fonte. É extremamente útil para desenvolvimento, pois elimina a necessidade de parar e reiniciar manualmente o servidor toda vez que uma modificação é feita.</p>
+
+            <h4>Estrutura de pastas</h4>
+            <p>Crie a seguinte estrutura de pastas e arquivos:</p>
+            <img src="img/pastas.png" alt="Estrutura de pastas"/>
+        </div>
+
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

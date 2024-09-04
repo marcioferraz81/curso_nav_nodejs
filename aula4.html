@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nodejs - express</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+              href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+              crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="css/estilo.css" rel="stylesheet" type="text/css" />
+
+    </head>
+    <body>
+        <div class="container my-3" style="text-align: center;">
+            <img src="img/logo_cps_versao_cor.png" alt="Centro Paula Souza" style="width: 10%; "/>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <!-- sticky-top -> fixo no topo com espaço com conteúdo abaixo)-->
+            <a class="navbar-brand" href="index.html">Nodejs - express</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon">
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"
+                           title="Página inicial"><i class="bi bi-house"></i>
+                            Instruções</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aula1.html"
+                           title="Aula 1"><i
+                                class="bi bi-input-cursor-text"></i> Aula 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aula2.html"
+                           title="Aula 2"><i
+                                class="bi bi-input-cursor-text"></i> Aula 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aula3.html"
+                           title="Aula 3"><i
+                                class="bi bi-input-cursor-text"></i> Aula 3</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="aula4.html"
+                           title="Aula 4"><i
+                                class="bi bi-input-cursor-text"></i> Aula 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aula5.html"
+                           title="Aula 5"><i
+                                class="bi bi-input-cursor-text"></i> Aula 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="atividade.html"
+                           title="Atividade"><i
+                                class="bi bi-input-cursor-text"></i> Atividade</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container my-3">
+            <h3>Aula 4 - Criando as views</h3>
+
+            <p>As views representam nosso layout, interface do app, a interação com o usuário. No caso são arquivos EJS (você pode criar páginas dinâmicas e reutilizar componentes de interface, como cabeçalhos e rodapés, sem duplicar o código), com a estrutura em HTML, formatadas em CSS (Bootstrap) e que possibilitam a inserção de códigos para receber e interpretar dados oriundos (no caso desse exemplo) de nossas rotas.</p>            
+            <h4>Abaixo o ./views/base.ejs</h4>
+            <img src="img/base.png" alt="Criação das páginas"/>
+            <h5 class="mt-4">Explicações:</h5>
+            <ul>
+                <li><%= title %> - receberá o título da uma rota</li>
+                <li>Temos a linkagem com o estilo do booststrap</li>
+                <li><%- include('partials/navbar') %> - inclui o "./views/partials/navbar.ejs" que é a nossa barra de navegação</li>
+                <li><%- include(view) %> - inclui a página conforme o "view" determinado na rota (aula 3)</li>
+                <li><%- include('partials/footer') %> - inclui o "./views/partials/footer.ejs" que é o nosso rodapé</li>
+                <li>os scripts incluem o jquery, bootstrap e popper para os funcionamentos do Bootstrap</li>
+                <li>Perceba que a base é o template onde as páginas serão carregadas</li>
+
+            </ul>
+            <h5>Abaixo ./views/index.ejs</h5>
+            <img src="img/index.png" alt="index aqui" class="mb-4"/>
+            
+            <h5>Abaixo ./views/partials/navbar.ejs</h5>
+            <img src="img/navbar.png" alt="barra de navegação" class="mb-4"/>
+            <h5>e ./views/partials/footer.ejs</h5>
+            <img src="img/footer.png" alt="rodapé da página"/>
+            <h5 class="mt-4">Explicações:</h5>
+            <ul>
+                <li>No navbar temos as ligações principais</li>
+                <li>Temos a linkagem com o estilo do booststrap</li>
+                <li>Perceba que chamamos a rota raiz de index "/" e a rota "/categorias" através do link</li>
+            </ul>
+
+            <h5>Abaixo ./views/categorias/add.ejs</h5>
+            <p>É neste arquivo que possuimos a rota para chamar o form de add (/add)</p>
+            <img src="img/add.png" alt="categoria add" class="mb-4"/>
+            <h5>./views/categorias/edit.ejs</h5>
+            <img src="img/edit.png" alt="categoria edit" class="mb-4"/>
+            <h5>./views/categorias/show.ejs</h5>
+            <img src="img/show.png" alt="categoria show" class="mb-4"/>
+
+            <h5>Agora que já temos todas as páginas criadas, precisamos criar o app.js (principal) - próxima aula</h5>
+        </div>
+
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
